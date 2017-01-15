@@ -1,42 +1,53 @@
 <!--~~~~~~~~~~~~~~~~~~~~~~~~ Hello there ~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <!DOCTYPE HTML>
-<html>
+<html id="html">
 
-  <head>
+<head>
+    <script src="http://code.jquery.com/jquery-latest.min.js" ></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arima+Madurai">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="functions.js"></script>
+    <link rel=stylesheet href="style.css" type="text/css" media=screen>
 
+    </body>
     <title>Uriel Sade</title>
 
-    <style>
-      body {
-        font-family: 'Arima Madurai', cursive;
-        text-align: center;
-      }
-
-      h1 {
-        margin-top: 100px;
-      }
-    </style>
-
     <script>
-    $(document).ready(function(){
+        $(document).ready(function() {
+            // jQuery
+            
+            selectBG();
 
-      $("#main-heading").toggle().fadeIn(500);
-      $("#prompt").toggle().delay(500).fadeIn(500);
-      $("#creation-date").toggle().delay(1000).fadeIn(500);
-      $("#dragon-fractal").toggle().delay(1500).fadeIn(500);
-    });
+
+            $.get("navigation.html", function(data){
+              $("#navigation-placeholder").replaceWith(data);
+            });
+
+
+
+        });
     </script>
 
-  </head>
-  <body>
-    <h1 id="main-heading">This is a work in progress...</h1>
-    <h3 id="prompt">In the meantime, check out my <a href="https://github.com/urielsade">GitHub!</a></h3>
-    <h5 id="creation-date" style="margin-bottom:50px">Created: Jan 6th, 2016</h5>
-    <img id="dragon-fractal" src="http://w3-o.cs.hm.edu/~ruckert/compiler/www.math.okstate.edu/img99.gif" alt="Dragon Fractal">
-  </body>
+</head>
+
+<body>
+
+    <div id="navigation-placeholder"></div>
+
+
+    <div class="jumbotron" id="background">
+
+        <div id="temporary-notice" class="container">
+          <h1 id="main-heading">Note: This is a work in progress...</h1>
+          <h3 id="prompt">In the meantime, check out my <a href="https://github.com/urielsade">GitHub!</a></h3>
+          <h5 id="creation-date" style="margin-bottom:50px">Created: Jan 6th, 2016</h5>
+
+        </div>
+    </div>
+</body>
+
 </html>

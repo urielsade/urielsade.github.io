@@ -1,0 +1,46 @@
+
+
+#background {
+  min-height: 100%;
+  margin: 0px 0px 0px 0px;
+  /*background-image: url(./images/stanleypark.jpg);*/
+  background-size : cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  image-orientation: from-image;
+
+}
+
+.navbar {
+  margin: 0px 0px 0px 0px;
+  background-attachment: fixed;
+}
+
+html, body {
+  height : 100%;
+  min-height: 100%;
+  background-color: black;
+}
+
+body {
+    font-family: 'Arima Madurai', cursive;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 100px;
+}
+
+h5 {
+  margin-bottom:50px;
+}
+
+#temporary-notice {
+
+    color: black;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    background-blend-mode: lighten;
+
+}
