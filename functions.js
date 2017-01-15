@@ -16,6 +16,6 @@ function selectBG(){
     $('#temporary-notice').css("color", "white");
   }
 
-  $('#background').css("background-image","url(./images/"+images[i]+".jpg)");
+  $('#background').css("background-image","url(./images/"+images[i]+".JPG)");
 
 }
