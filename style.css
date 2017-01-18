@@ -15,6 +15,12 @@
 .navbar {
   margin: 0px 0px 0px 0px;
   background-attachment: fixed;
+
+}
+
+.dropdown-menu, .dropdown-menu>li>a {
+  background-color: rgb(64,64,64);
+  color: rgb(200,200,200);
 }
 
 html, body {
