@@ -3,7 +3,7 @@ function Particle(){
 
   this.pos = getStartingVector();
   this.vel = createVector();
-  this.max_speed = 10;
+  this.max_speed = 7;
 
 }
 
@@ -13,7 +13,7 @@ Particle.prototype.accelerate = function(vector_field){
   var i = row * cols + column;
   var vector = vector_field[i];
   vector.normalize();
-  vector.mult(50);
+  vector.mult(100);
   this.vel.add(vector);
   this.vel.limit(this.max_speed);
   this.pos.add(this.vel);

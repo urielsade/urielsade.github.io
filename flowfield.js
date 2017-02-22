@@ -15,15 +15,16 @@ var scl = 20;
 
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
-  canvas.position(1,1);
+  canvas.position(0,30);
   canvas.style('z-value', '-1');
   background(0,0,0,0);
-  rows = floor(height/scl);
+  rows = 25;
+  scl = floor(height/rows);
   cols = floor(width/scl);
   time_inc = 0.2;
   time_x = time_y = time_z = 0;
 
-  for(var i = 0; i < 50; i++){
+  for(var i = 0; i < 10; i++){
     particles[i] = new Particle();
   }
 
@@ -46,7 +47,7 @@ function draw(){
     for(var x = 0; x < cols; x++){
       push();
       translate(x*scl, y*scl);
-      var direction_vector = p5.Vector.fromAngle(noise(time_x, time_y, time_z)*PI - PI/2);
+      var direction_vector = p5.Vector.fromAngle(noise(time_x, time_y, time_z)*2*PI + PI);
       rotate(direction_vector.heading());
       stroke(0,255,0, 10);
       strokeWeight(1);
