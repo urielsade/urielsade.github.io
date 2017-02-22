@@ -73,4 +73,6 @@ function updateParticles(){
 
 function windowResized(){
   resizeCanvas(windowWidth, windowHeight + 100);
+  scl = floor(height/rows);
+  cols = floor(width/scl);
 }
