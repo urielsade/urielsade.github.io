@@ -46,7 +46,7 @@ function draw(){
     time_x = 0;
     for(var x = 0; x < cols; x++){
       push();
-      translate(x*scl, y*scl);
+      translate(x*scl + scl/2, y*scl + scl/2);
       var direction_vector = p5.Vector.fromAngle(noise(time_x, time_y, time_z)*2*PI + PI);
       rotate(direction_vector.heading());
       stroke(0,255,0, 10);
@@ -57,7 +57,7 @@ function draw(){
       time_x += time_inc;
     }
     time_y += time_inc;
-    time_z += 0.001;
+    time_z += 0.0002;
   }
 
   updateParticles();
