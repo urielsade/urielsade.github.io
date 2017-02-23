@@ -9,9 +9,12 @@ function Particle(){
 
 Particle.prototype.accelerate = function(vector_field){
   var column = floor(this.pos.x / (scl));
-  while(column > cols) column--;
+
   var row = floor(this.pos.y / (scl));
-  while(row > rows) row--;
+  if(column > cols || row > rows) {
+    this.pos = getStartingVector();
+    return;
+  }
   var i = row * cols + column;
   var vector = vector_field[i];
   if(vector == undefined){
