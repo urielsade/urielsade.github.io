@@ -24,7 +24,7 @@ function setup() {
   time_inc = 0.2;
   time_x = time_y = time_z = 0;
 
-  for(var i = 0; i < 10; i++){
+  for(var i = 0; i < 20; i++){
     particles[i] = new Particle();
   }
 
@@ -33,7 +33,7 @@ function setup() {
 
 function draw(){
 
-  background(0,0,0,15);
+  background(0,0,0,10);
 
   fill(255);
   // text("by Uriel Sade", width/40, height- height/40);
@@ -49,9 +49,9 @@ function draw(){
       translate(x*scl + scl/2, y*scl + scl/2);
       var direction_vector = p5.Vector.fromAngle(noise(time_x, time_y, time_z)*2*PI + PI);
       rotate(direction_vector.heading());
-      stroke(0,255,0, 10);
+      stroke(0,255,0, 7);
       strokeWeight(1);
-      line(-scl/4,0,scl/4,0);
+      line(-scl/6,0,scl/6,0);
       pop();
       field[y* cols + x] = direction_vector;
       time_x += time_inc;
