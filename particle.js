@@ -3,22 +3,27 @@ function Particle(){
 
   this.pos = getStartingVector();
   this.vel = createVector();
-  this.max_speed = 7;
+  this.max_speed = 15;
 
 }
 
 Particle.prototype.accelerate = function(vector_field){
-  var column = floor(this.pos.x / (scl+1));
-  var row = floor(this.pos.y / (scl+1));
+  var column = floor(this.pos.x / (scl));
+  while(column > cols) column--;
+  var row = floor(this.pos.y / (scl));
+  while(row > rows) row--;
   var i = row * cols + column;
   var vector = vector_field[i];
+  if(vector == undefined){
+      return;
+  }
   vector.normalize();
-  vector.mult(100);
+  vector.mult(50);
   this.vel.add(vector);
   this.vel.limit(this.max_speed);
   this.pos.add(this.vel);
   this.checkBounds();
-  stroke(255, 255, 255);
+  stroke(0, 255, 0);
   strokeWeight(2);
   point(this.pos.x, this.pos.y);
 }
