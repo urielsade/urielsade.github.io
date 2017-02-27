@@ -14,7 +14,8 @@
 
 .navbar {
   margin: 0px 0px 0px 0px;
-  background-attachment: fixed;
+  background-attachment: scroll;
+
 
 }
 
@@ -24,8 +25,8 @@
 }
 
 html, body {
-  height : 100%;
-  min-height: 100%;
+  height : 95%;
+  min-height: 95%;
   background-color: rgba(0,0,0,1);
   opacity: 1;
 }

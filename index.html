@@ -8,8 +8,7 @@
     <script src="http://code.jquery.com/jquery-latest.min.js" ></script>
     <script src="p5.min.js" ></script>
     <script src="p5.dom.js" ></script>
-    <script src="flowfield.js" ></script>
-    <script src="particle.js" ></script>
+    <div id="p5"></div>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arima+Madurai">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
@@ -24,17 +23,15 @@
 
     <script>
         $(document).ready(function() {
-            // jQuery
 
-            // selectBG();
-
+            // selectBG(); // the background is now a simulation
 
             $.get("navigation.html", function(data){
               $("#navigation-placeholder").replaceWith(data);
             });
 
-
-
+            $('#p5').append("<script src='flowfield.js' >%</script%>")
+                    .append("<script src='particle.js'  >%</script%>");
         });
     </script>
 

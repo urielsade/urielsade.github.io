@@ -15,8 +15,9 @@ var scl = 20;
 
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
-  canvas.position(0,30);
+  canvas.position(0,0);
   canvas.style('z-value', '-1');
+  canvas.style('opacity', '0.99');
   background(0,0,0,0);
   rows = 25;
   scl = floor(height/rows);
@@ -39,8 +40,6 @@ function draw(){
   // text("by Uriel Sade", width/40, height- height/40);
   noFill();
   field = [];
-  canvas.style('z-value', '-1');
-  canvas.style('opacity', '0.99');
   time_y = 0;
   for(var y = 0; y < rows; y++){
     time_x = 0;
@@ -72,7 +71,5 @@ function updateParticles(){
 }
 
 function windowResized(){
-  resizeCanvas(windowWidth, windowHeight + 100);
-  scl = floor(height/rows);
-  cols = floor(width/scl);
+  setup();
 }
