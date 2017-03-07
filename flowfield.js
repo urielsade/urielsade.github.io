@@ -72,4 +72,5 @@ function updateParticles(){
 
 function windowResized(){
   setup();
+  
 }

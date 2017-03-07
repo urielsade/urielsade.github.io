@@ -1,0 +1,16 @@
+html, body {
+
+  padding: 0px,0px,0px,0px;
+  margin: 0px,0px,0px,0px;
+  border: 0;
+  width: 100%;
+
+}
+img {
+  position: absolute;
+  float: left;
+  padding: 0px,0px,0px,0px;
+  margin: 0px,0px,0px,0px;
+  border: 0;
+  width: 100%;
+}

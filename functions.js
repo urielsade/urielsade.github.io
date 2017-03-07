@@ -1,3 +1,4 @@
+/* old - random background selector
 
 function selectBG(){
 
@@ -19,3 +20,4 @@ function selectBG(){
   $('#background').css("background-image","url(./images/"+images[i]+".JPG)");
 
 }
+*/
