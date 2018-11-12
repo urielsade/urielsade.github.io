@@ -1,23 +1,27 @@
-/* old - random background selector
 
-function selectBG(){
+function selectBG(image_name){
 
-  var images = [
-    'camp',
-    'chief',
-    'crescentbeach',
-    'houston',
-    'lake',
-    'stanleypark'
-  ];
+    if (image_name == undefined) {
 
-  var i = Math.floor(Math.random()*images.length);
+        var images = [
+            'camp',
+            'chief',
+            'crescentbeach',
+            'houston',
+            'lake',
+            'stanleypark'
+        ];
 
-  if( i == 4){
-    $('#temporary-notice').css("color", "white");
-  }
+        var i = Math.floor(Math.random() * images.length);
 
-  $('#background').css("background-image","url(./images/"+images[i]+".JPG)");
+        image_name = images[i];
+    }
 
+    if (image_name == 'lake') {
+        $('#temporary-notice').css("color", "white");
+    }
+
+    var path = "url(./images/" + image_name + ".JPG)";
+
+    $('#background').css("background-image", path);
 }
-*/
